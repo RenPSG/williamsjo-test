@@ -9,5 +9,8 @@ int main(int argc, char *argv[]) {
   s = malloc(1);
   s = "out of bounds write\n";
   printf("%s", s);
+  free(s);
+  s = "used after free";
+  printf("%s", s);
   return 0;
 }
