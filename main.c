@@ -31,9 +31,18 @@ void overflowBuffer() {
   return;
 }
 
+void anotherBO() {
+  char *input = malloc(1);
+  printf("Again. Enter some text: ");
+  scanf("%s", input);
+  printf("%s\n", input);
+  return;
+}
+
 int main(int argc, char *argv[]) {
   doMemoryLeak();
   useAfterFree();
   overflowBuffer();
+  anotherBO();
   return 0;
 }
